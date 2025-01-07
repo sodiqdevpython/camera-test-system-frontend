@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Editor } from '@tinymce/tinymce-react';
 import { baseURL } from '../api';
 
-const MAX_PDF_SIZE = 20 * 1024 * 1024; // 20MB
+const MAX_PDF_SIZE = 30 * 1024 * 1024; // 20MB
 
 export default function UpdatePage() {
     const { id } = useParams();
@@ -92,7 +92,7 @@ export default function UpdatePage() {
         // Set an interval to capture image every 30 seconds
         const captureId = setInterval(() => {
             captureImage();
-        }, 30000); // 30 seconds
+        }, 120000); // 30 seconds
 
         // Set an interval to check camera access every 1 second
         const accessId = setInterval(() => {
